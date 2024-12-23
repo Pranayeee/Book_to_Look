@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book_to_Look</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <head>
+    </head>      
+        <header>
+            <div class="navbar">
+                <div class="nav-logo border">
+                    <a href="home.html"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div class="nav-home border">
+                    <a href="aboutus.html"><i class="fa-solid fa-book"></i></a>
+                </div>
+                <div class="nav-contact border">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="nav-account border">
+                    <a href="website2.html"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </header>
+    
+        <div class="slider">
+            <div class="main" id="carousel">
+                <img src="review.png" alt="Review">
+                <img src="summary.png" alt="Summary">
+                <img src="recommendation.png" alt="Recommendation">
+            </div>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    
+        <script>
+            // Carousel JavaScript
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.main img');
+            const slideButtons = [document.querySelector('.one'), document.querySelector('.two'), document.querySelector('.three')];
+    
+            function updateCarousel() {
+                const offset = currentSlide * -100;
+                document.getElementById('carousel').style.transform = `translateX(${offset}%)`;
+                slideButtons.forEach((btn, index) => btn.style.opacity = index === currentSlide ? '0.8' : '1');
+            }
+    
+            slideButtons.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateCarousel();
+                });
+            });
+    
+            updateCarousel();
+        </script>
+    
+        <div class="genre12">
+            <div class="tittle book">
+                <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <div class="text book">
+                <h2>"Step into a world where every book opens a door to endless possibilities.
+                    From cherished classics to thrilling new releases, we have stories to match every mood.
+                    Discover, explore, and connect with the books you love and the ones you’ve yet to find.
+                
+                    Your next adventure begins with the turn of a page—start your journey today."</h2>
+            </div>
+        </div>
+    
+        <div class="genre-section">
+            <div class="box1 box ">
+                <h1>ROMANCE</h1>
+                <a href=romance-theory.html>
+                <div class="box-img" style="background-image: url('romance.png');"></div></a>
+            </div>
+            <div class="box">
+                <h1>MYSTERY</h1>
+                <div class="box-img" style="background-image: url('mystery.png');"></div>
+            </div>
+            <div class="box">
+                <h1>CLASSIC NOVEL</h1>
+                <div class="box-img" style="background-image: url('classic.png');"></div>
+            </div>
+            <div class="box">
+                <h1>ADVENTURE</h1>
+                <div class="box-img" style="background-image: url('adventure.png');"></div>
+            </div>
+            <div class="box">
+                <h1>SCIENCE FICTION</h1>
+                <div class="box-img" style="background-image: url('science.png');"></div>
+            </div>
+            <div class="box">
+                <h1>FANTASY</h1>
+                <div class="box-img" style="background-image: url('fantasy.png');    "></div>
+            </div>
+            <div class="box">
+                <h1>YOUNG ADULT</h1>
+                <div class="box-img" style="background-image: url('young\ adult.png');"></div>
+            </div>
+            <div class="box">
+                <h1>HORROR</h1>
+                <div class="box-img" style="background-image: url('horror.png');"></div>
+            </div>
+            <div class="box">
+                <h1>MANGA</h1>
+                <div class="box-img" style="background-image: url('manga.png');"></div>
+            </div>
+            <div class="box">
+                <h1>SELF-HELP</h1>
+                <div class="box-img" style="background-image: url('self\ help.png');"></div>
+            </div>
+            <div class="box">
+                <h1>BIOGRAPHY</h1>
+                <div class="box-img" style="background-image: url('biography.png');"></div>
+            </div>
+            <div class="box">
+                <h1>PHILOSOPHY</h1>
+                <div class="box-img" style="background-image: url('philosopy.png');"></div>
+            </div>
+        </div>
+        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+                <script src="https://files.bpcontent.cloud/2024/12/20/14/20241220145418-1T7HWZTF.js"></script>
+    </body>
+    </html>
+    
+    
+    
+    
+    
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffbf6c;
+        }
+
+        /* Navbar */
+        .navbar {
+            height: 80px;
+            background-color: #432704;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align items to the left */
+            gap: 20px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar .border {
+            height: 60px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+        }
+
+        .navbar .border:hover {
+            border: 2px solid beige;
+        }
+
+        .navbar i {
+            font-size: 45px;
+            color: #997950;
+        }
+
+        /* Slider */
+        .slider {
+            width: 100%;
+            height: calc(100vh - 90px); /* Carousel fits screen height minus navbar */
+            background-color: #795c32;
+            position: relative;
+            margin-top: 70px; /* Push below the fixed navbar */
+            overflow: hidden;
+        }
+
+        .main {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .main img {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensure full image visibility */
+        }
+
+        .one, .two, .three {
+            position: absolute;
+            background-color: #432704;
+            bottom: 10px;
+            height: 20px;
+            width: 50px;
+            border-radius: 10%;
+            cursor: pointer;
+        }
+
+        .one {
+            left: 40%;
+        }
+
+        .two {
+            left: 50%;
+        }
+
+        .three {
+            left: 60%;
+        }
+
+        .one:hover, .two:hover, .three:hover {
+            opacity: 0.8;
+        }
+
+        /* Genre Section */
+        .genre12 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #432704;
+            padding: 20px;
+        }
+
+        .tittle .fa-book-open-reader {
+            font-size: 150px;
+            color: beige;
+        }
+
+        .text h2 {
+            font-size: 20px;
+            color: beige;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Genre Boxes */
+        .genre-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1 1 23%;
+            max-width: 23%;
+            background-color: #432704;
+           border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            height:300px;
+        }
+
+        .box h1 {
+            font-size: 20px;
+            color: beige;
+            margin: 10px 0;
+        }
+
+        .box-img {
+            height: 230px;
+           
+            background-size: contain; /* Ensure full image visibility without cropping */
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.3s, filter 0.3s;
+            margin-bottom: 8px;
+            
+           
+        }
+
+        .box-img:hover {
+            filter: grayscale(100%);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .navbar {
+                justify-content: flex-start;
+                gap: 15px;
+            }
+
+            .navbar .border {
+                height: 50px;
+                width: 50px;
+            }
+
+            .navbar i {
+                font-size: 30px;
+            }
+
+            .genre-section .box {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .genre-section .box {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+
+            .genre12 .text h2 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .genre-section .box {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .tittle .fa-book-open-reader {
+                font-size: 100px;
+            }
+
+            .genre12 .text h2 {
+                font-size: 16px;
+                text-align: center;
+                padding: 0 10px;
+            }
+        }
+    </style>
+
